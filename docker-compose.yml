@@ -6,7 +6,7 @@ services:
       - "9092:9092"
     environment:
       KAFKA_ADVERTISED_HOST_NAME: kafka
-      KAFKA_CREATE_TOPICS: "acceleration:1:1"
+      KAFKA_CREATE_TOPICS: "android:1:1,acceleration:1:1"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -53,3 +53,5 @@ services:
     command: jupyter notebook --ip=0.0.0.0
     ports:
       - 8888:8888
+    volumes:
+      - ./notebooks:/notebooks
