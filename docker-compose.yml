@@ -15,7 +15,7 @@ services:
     image: wurstmeister/zookeeper
     ports:
       - "2181:2181"
-      
+
   master:
     image: jairamc/spark-kafka-streaming
     hostname: master
